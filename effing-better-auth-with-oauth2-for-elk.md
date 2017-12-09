@@ -2,7 +2,7 @@ Don’t be misled by the title. You may be thinking, “Finally! Instructions on
 
 I encountered this problem personally and I could not find any solution in forums, documentation (Ha!), or blogs. I really 
 looked a lot and hard. The best I could find are some forum posts that were closed with no resolution and 
-[X-Pack with Oauth Authentication](https://discuss.elastic.co/t/x-pack-with-oauth-authentication/72015/2) which led me to this
+[X-Pack with OAuth Authentication](https://discuss.elastic.co/t/x-pack-with-oauth-authentication/72015/2) which led me to this
 gem [Integrating with Other Authentication Systems](https://www.elastic.co/guide/en/x-pack/current/custom-realms.html)
 
 Those are just for reference. Observe and familiarize yourselves with the contents, but believe me when I say, 
@@ -14,8 +14,24 @@ this issue and need some explanation or at least some convincing about the solut
 
 ## Oauth2 Refresher
 
-Before getting to the real meat of things, we first need to understand (big picture) how Oauth2 works and how it fits in with X-Pack
-and the ELK stack.
+Before getting to the real meat of things, we first need to understand (big picture) how OAuth2 works and how it fits in with X-Pack and the ELK stack.
+
+Rather than get into technical details an history of what OAuth2 is and why to use it, I'm going to go straight into the flow to illustrate what exactly is happening during OAuth2 authentication process.
+
+### OAuth2 Flow
+
+Due to the nature of the web OAuth2 is connection-less. That is, it isn't something that just stays open like a VPN. Instead, numerous requests and responses are made for verification.
+
+<div class="alert alert-warning" role="alert">
+  <h4 class="alert-heading">Well done!</h4>
+  <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+  <hr>
+  <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+</div>
+
+## X-Pack: How it works
+
+Now that we understand a bit how OAuth2 works, let's have a look into X-Pack and see exactly why these two are in conflict.
 
 ## The Answer
 
